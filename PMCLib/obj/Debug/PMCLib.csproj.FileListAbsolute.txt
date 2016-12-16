@@ -1,0 +1,4 @@
+C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMCLib\bin\Debug\PMCLib.dll
+C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMCLib\bin\Debug\PMCLib.pdb
+C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMCLib\obj\Debug\PMCLib.dll
+C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMCLib\obj\Debug\PMCLib.pdb
