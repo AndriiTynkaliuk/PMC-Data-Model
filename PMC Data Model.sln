@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMC Data Model", "PMC Data 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMCLib", "PMCLib\PMCLib.csproj", "{B9124081-698A-4EBF-8413-782ED8C19E29}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMCLibTests", "PMCLibTests\PMCLibTests.csproj", "{C30A9CFF-6B21-47B3-994D-FA698801EE81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B9124081-698A-4EBF-8413-782ED8C19E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9124081-698A-4EBF-8413-782ED8C19E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9124081-698A-4EBF-8413-782ED8C19E29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C30A9CFF-6B21-47B3-994D-FA698801EE81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C30A9CFF-6B21-47B3-994D-FA698801EE81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C30A9CFF-6B21-47B3-994D-FA698801EE81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C30A9CFF-6B21-47B3-994D-FA698801EE81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

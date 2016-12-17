@@ -1,0 +1,9 @@
+C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMCLibTests\bin\Debug\PMCLibTests.dll
+C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMCLibTests\bin\Debug\PMCLibTests.pdb
+C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMCLibTests\bin\Debug\PMCLib.dll
+C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMCLibTests\bin\Debug\PMCLib.pdb
+C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMCLibTests\obj\Debug\PMCLibTests.csprojResolveAssemblyReference.cache
+C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMCLibTests\obj\Debug\PMCLibTests.dll
+C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMCLibTests\obj\Debug\PMCLibTests.pdb
+C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMCLibTests\bin\Debug\nunit.framework.dll
+C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMCLibTests\bin\Debug\nunit.framework.xml

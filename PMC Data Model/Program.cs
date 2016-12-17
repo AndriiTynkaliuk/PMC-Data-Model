@@ -11,72 +11,59 @@ namespace PMC_Data_Model
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the next PMC apllication");
-            Point<int> point2DInt = new Point<int>(4, 5);
-            Point<int> point3DInt = new Point<int>(6, 7, 8);
-            Point<double> point2DFl = new Point<double>(4.0, 5.1);
-            Point<double> point3DFl = new Point<double>(6.8, 7.7, 8.5);
+            Point<int> p = new Point<int>(10, 10);
+            Position<int> pos = new Position<int>();
+            Matrix<int> matrix = new Matrix<int>();
+            Container<int> con = new Container<int>();
+            Containers<int> cons = new Containers<int>();
 
-            Position<int> integerPos = new Position<int>();
-            integerPos.Add(point2DInt);
-            integerPos.Add(point3DInt);
-            Position<double> floatPos = new Position<double>();
-            floatPos.Add(point2DFl);
-            floatPos.Add(point3DFl);
+            var random = new Random();
 
-            Console.WriteLine("Generated points: ");
-            PositionEnumerator<int> eI = new PositionEnumerator<int>(integerPos);
-            while(eI.MoveNext())
+            for (int i = 0; i < 100; i++)
             {
-                Console.WriteLine(eI.Current.ToString());
-            }
-            PositionEnumerator<double> eF = new PositionEnumerator<double>(floatPos);
-            while (eF.MoveNext())
-            {
-                Console.WriteLine(eF.Current.ToString());
+                pos.Clear();
+                for (int j = 0; j < 400; j++)
+                {
+                        pos.Add(new Point<int>(random.Next(1, 99), random.Next(1, 99)));
+                }
+                matrix.Add(pos);
             }
 
-            eF.Reset();
-            eI.Reset();
+            con.Add(matrix);
 
-            integerPos.Clear();
-            floatPos.Remove(point3DFl);
+            cons.Add(con);
 
-            if (!floatPos.Contains(point3DFl))
-                Console.WriteLine("No such element in the collection");
+            Console.WriteLine("Points: " + pos.Count + " Matrixs: " + matrix.Count + " Container: " + con.Count
+                + " Containers: " + cons.Count);
 
-            while (eI.MoveNext())
-            {
-                Console.WriteLine(eI.Current.ToString());
-            }
-            while (eF.MoveNext())
-            {
-                Console.WriteLine(eF.Current.ToString());
-            }
+            Position<int> p2 = new Position<int>();
+            p2.Add(new Point<int>(0, 0));
+            PositionEnumerator<int> en = new PositionEnumerator<int>(p2);
 
-            floatPos.Add(point3DFl);
-            eF.Reset();
-            Console.WriteLine("double position:");
-            while (eF.MoveNext())
+            Point<int>[] pArr = new Point<int>[] { new Point<int>(1, 1), new Point<int>(2, 2) };
+            p2.CopyTo(pArr, 1);
+            foreach (var element in pArr)
             {
-                Console.WriteLine(eF.Current.ToString());
-            }
-            Matrix<double> matrix = new Matrix<double>();
-            matrix.Add(floatPos);
-            MatrixEnumerator<double> eM = new MatrixEnumerator<double>(matrix);
-            Console.WriteLine("Double matrix:");
-            Position<double> newPosition = new Position<double>();
-            while (eM.MoveNext())
-            {
-                Console.WriteLine(eM.Current + " | ");
-                newPosition = eM.Current;
+                Console.WriteLine(element.ToString());
             }
 
-            PositionEnumerator<double> p = new PositionEnumerator<double>(newPosition);
-            Console.WriteLine("New double position:");
-            while (p.MoveNext())
+            pos.Remove(0);
+            Console.WriteLine("Position contains: " + pos.Count);            
+            p2.Add(p);
+            en.Reset();
+            Console.WriteLine("New element Point(10,10) was added");
+            while(en.MoveNext())
             {
-                Console.WriteLine(p.Current.ToString());
+                Console.WriteLine(en.Current);
+            }
+            if (p2.Contains(p))
+                Console.WriteLine("Position p2 contains Point(10, 10)");
+            p2.Remove(p);
+            en.Reset();
+            Console.WriteLine("Eelement Point(10,10) was removed");
+            while (en.MoveNext())
+            {
+                Console.WriteLine(en.Current);
             }
             Console.ReadKey();
         }

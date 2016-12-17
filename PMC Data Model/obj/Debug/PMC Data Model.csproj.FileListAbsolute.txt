@@ -6,3 +6,5 @@ C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMC Data Model\obj\Debug\PMC Data M
 C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMC Data Model\obj\Debug\PMC Data Model.pdb
 C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMC Data Model\bin\Debug\PMCLib.dll
 C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMC Data Model\bin\Debug\PMCLib.pdb
+C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMC Data Model\bin\Debug\nunit.framework.dll
+C:\Users\williamlv.ZS\Dropbox\PMC Data Model\PMC Data Model\bin\Debug\nunit.framework.xml

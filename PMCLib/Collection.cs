@@ -156,6 +156,17 @@ namespace PMCLib
         }
 
         /// <summary>
+        /// Removes the element at the specified index
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
+        public bool Remove(int index)
+        {
+            arrayList.RemoveAt(index);
+            return true;
+        }
+
+        /// <summary>
         /// Returns an Enumarator object
         /// </summary>
         /// <returns></returns>
