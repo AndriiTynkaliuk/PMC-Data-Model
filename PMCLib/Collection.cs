@@ -28,7 +28,7 @@ namespace PMCLib
         /// <summary>
         /// Returns number of elements in the collection
         /// </summary>
-        public virtual int Count
+        public int Count
         {
             get
             {
@@ -39,7 +39,7 @@ namespace PMCLib
         /// <summary>
         /// Returns True if the collection is only for read.
         /// </summary>
-        public virtual bool IsReadOnly
+        public bool IsReadOnly
         {
             get
             {
@@ -88,7 +88,7 @@ namespace PMCLib
         /// </summary>
         /// <param name="index"></param>
         /// <returns></returns>
-        public virtual T this[int index]
+        public T this[int index]
         {
             get
             {

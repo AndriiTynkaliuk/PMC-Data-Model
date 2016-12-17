@@ -69,22 +69,19 @@ namespace PMCLib
         /// Moves the enumerator to the next element
         /// </summary>
         /// <returns></returns>
-        public virtual bool MoveNext()
-        {
-            if (position < coll.Count)
-            {
-                position++;
-                current = (T)coll[position];
-                return (position < coll.Count);
-            }
+        public bool MoveNext()
+        { 
+            if (++position >= coll.Count)
+                return false;
             else
-                return false;               
+                current = (T)coll[position];
+            return true;            
         }
 
         /// <summary>
         /// Sets the enumerator in before the first element in the collection
         /// </summary>
-        public virtual void Reset()
+        public void Reset()
         {
             position = -1;
             current = default(T);

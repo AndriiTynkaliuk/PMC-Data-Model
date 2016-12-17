@@ -14,13 +14,13 @@ namespace PMC_Data_Model
             Console.WriteLine("Welcome to the next PMC apllication");
             Point<int> point2DInt = new Point<int>(4, 5);
             Point<int> point3DInt = new Point<int>(6, 7, 8);
-            Point<float> point2DFl = new Point<float>(4f, 5f);
-            Point<float> point3DFl = new Point<float>(6f, 7f, 8f);
+            Point<double> point2DFl = new Point<double>(4.0, 5.1);
+            Point<double> point3DFl = new Point<double>(6.8, 7.7, 8.5);
 
             Position<int> integerPos = new Position<int>();
             integerPos.Add(point2DInt);
             integerPos.Add(point3DInt);
-            Position<float> floatPos = new Position<float>();
+            Position<double> floatPos = new Position<double>();
             floatPos.Add(point2DFl);
             floatPos.Add(point3DFl);
 
@@ -30,10 +30,53 @@ namespace PMC_Data_Model
             {
                 Console.WriteLine(eI.Current.ToString());
             }
-            PositionEnumerator<float> eF = new PositionEnumerator<float>(floatPos);
+            PositionEnumerator<double> eF = new PositionEnumerator<double>(floatPos);
             while (eF.MoveNext())
             {
                 Console.WriteLine(eF.Current.ToString());
+            }
+
+            eF.Reset();
+            eI.Reset();
+
+            integerPos.Clear();
+            floatPos.Remove(point3DFl);
+
+            if (!floatPos.Contains(point3DFl))
+                Console.WriteLine("No such element in the collection");
+
+            while (eI.MoveNext())
+            {
+                Console.WriteLine(eI.Current.ToString());
+            }
+            while (eF.MoveNext())
+            {
+                Console.WriteLine(eF.Current.ToString());
+            }
+
+            floatPos.Add(point3DFl);
+            eF.Reset();
+            Console.WriteLine("double position:");
+            while (eF.MoveNext())
+            {
+                Console.WriteLine(eF.Current.ToString());
+            }
+            Matrix<double> matrix = new Matrix<double>();
+            matrix.Add(floatPos);
+            MatrixEnumerator<double> eM = new MatrixEnumerator<double>(matrix);
+            Console.WriteLine("Double matrix:");
+            Position<double> newPosition = new Position<double>();
+            while (eM.MoveNext())
+            {
+                Console.WriteLine(eM.Current + " | ");
+                newPosition = eM.Current;
+            }
+
+            PositionEnumerator<double> p = new PositionEnumerator<double>(newPosition);
+            Console.WriteLine("New double position:");
+            while (p.MoveNext())
+            {
+                Console.WriteLine(p.Current.ToString());
             }
             Console.ReadKey();
         }
